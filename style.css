@@ -1,0 +1,444 @@
+/* ================= GLOBAL STYLES ================= */
+:root {
+    --primary-color: #d97706;
+    /* A nice Thai spice orange/gold */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.social-icons i:hover {
+    color: var(--primary-color);
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #b45309;
+    /* Darker shade on hover */
+}
+
+/* ================= PAGE 1: HERO SECTION ================= */
+.hero {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 20fr 10fr;
+    /* Image is larger */
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-image-container img {
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    height: auto;
+    /* Enforces height */
+}
+
+.hero-info {
+    padding: 20px;
+}
+
+.hero-info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.info-block {
+    margin-top: 30px;
+}
+
+.info-block h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* ================= PAGE 2: ABOUT SECTION ================= */
+.about {
+    padding: 80px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.image-grid img {
+    height: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* ================= PAGE 3: FEATURE SECTION ================= */
+.feature {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.feature-layout {
+    display: flex;
+    flex-direction: row;
+    /* Default: Image Left */
+    align-items: center;
+    gap: 50px;
+}
+
+.feature-image {
+    flex: 1.5;
+}
+
+.feature-image img {
+    border-radius: 10px;
+
+    width: 100%;
+
+    height: auto;
+}
+
+.feature-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.feature-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.feature-content .hours {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text-light);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logos-left {
+    display: flex;
+    height: auto;
+    margin-left: 50px;
+    gap: 20px;
+}
+
+.footer-logos-right {
+    display: flex;
+    height: auto;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.logo-slot {
+    width: 80px;
+    height: 80px;
+    background-color: #333;
+    /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-socials a {
+    margin-left: 10px;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+/* ================= MENU PAGE STYLES ================= */
+.menu-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.menu-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.pdf-viewer iframe {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-fallback {
+    margin-top: 20px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+
+    /* --- GLOBAL --- */
+    .container {
+        padding: 0 15px;
+        /* Less padding on small screens */
+    }
+
+    /* --- HEADER --- */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        /* Hide main links to make space, typically used with a burger menu */
+        display: none;
+    }
+
+    /* --- PAGE 1: HERO SECTION --- */
+    .hero-layout {
+        /* Stack the image and text vertically */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-info {
+        order: -1;
+        /* Puts the text/button above the image */
+        padding: 0;
+        text-align: center;
+        /* Center align text for mobile */
+    }
+
+    .hero-info .btn-primary {
+        margin: 15px auto;
+        /* Center the button */
+    }
+
+    .hero-info h1 {
+        font-size: 2.5rem;
+        /* Reduce large heading size */
+    }
+
+    /* --- PAGE 2: ABOUT SECTION --- */
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .image-grid {
+        /* Allow smaller minimum column size for mobile */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .image-grid img {
+        height: 180px;
+    }
+
+
+    /* --- PAGE 3: FEATURE SECTION --- */
+    .feature-layout {
+        /* Stack the image and text vertically */
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-image,
+    .feature-content {
+        /* Ensure flex items take full width when stacked */
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .feature-image img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .feature-content {
+        text-align: center;
+    }
+
+    /* --- FOOTER --- */
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-logos-left,
+    .footer-logos-right {
+        /* Center logos when stacked */
+        justify-content: center;
+        margin: 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-links span {
+        display: none;
+        /* Hide the separator bars on mobile */
+    }
+}
