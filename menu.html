@@ -32,15 +32,504 @@
     <section class="menu-container">
         <h1>Our Menu</h1>
 
-        <div class="pdf-viewer">
-            <iframe src="menu.pdf" width="100%" height="800px">
-            </iframe>
+        <div class="category-navbar">
+            <div class="category-nav-list">
+                <a href="#appetizers">Appetizers</a>
+                <a href="#lao-food">Lao Food</a>
+                <a href="#pho">Pho</a>
+                <a href="#curry">Curry</a>
+                <a href="#stir-fry">Stir Fry</a>
+                <a href="#noodles-rice">Noodles/Rice</a>
+                <a href="#chef-specials">Chef Specials</a>
+                <a href="#lunch">Lunch</a>
+                <a href="#extras">Sides/Dessert</a>
+            </div>
+        </div>
 
-            <p class="pdf-fallback">
-                Unable to view the menu?
-                <a href="menu.pdf" target="_blank">Click here to download the PDF.</a>
+        <div class="menu-content-wrapper" style="margin-top: 30px;">
+
+            <div class="menu-section-card" id="appetizers">
+                <div class="card-header">
+                    <h2>Appetizers</h2>
+                </div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Fried Pork Spring Rolls (4)</h3>
+                        <p class="item-price">$10</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fried Veggie Spring Rolls (4)</h3>
+                        <p class="item-price">$9</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fresh Veggie Spring Rolls (2)</h3>
+                        <p class="item-price">$6</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fresh Shrimp Spring Rolls (2)</h3>
+                        <p class="item-price">$7</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pork Dumplings (6)</h3>
+                        <p class="item-price">$10</p>
+                        <p class="item-description">Steamed or Fried</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Veggie Dumplings (6)</h3>
+                        <p class="item-price">$9</p>
+                        <p class="item-description">Steamed or Fried</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fried Squid <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-price">$10</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Edamame</h3>
+                        <p class="item-price">$5</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fried Tofu (6)</h3>
+                        <p class="item-price">$8</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fried Chicken Wings (6)</h3>
+                        <p class="item-price">$10</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Get Thai'd Wings (6) <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-price">$12</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="lao-food">
+                <div class="card-header">
+                    <h2>Traditional Lao Food</h2>
+                </div>
+                <div class="protein-banner">*Made fresh with bold Lao flavors & spices!*</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Lao Sausage (Pork)</h3>
+                        <p class="item-price">$14</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Lao Beef Jerky</h3>
+                        <p class="item-price">$14</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Larb Kai</h3>
+                        <p class="item-price">$15</p>
+                        <p class="item-description">Minced Chicken Salad</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Larb Seen</h3>
+                        <p class="item-price">$15</p>
+                        <p class="item-description">Sliced Beef Salad</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Mama Pan Fried Eggs</h3>
+                        <p class="item-price">$10</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Tiger Cry</h3>
+                        <p class="item-price">$20</p>
+                        <p class="item-description">Sliced Grilled Brisket</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pun Seen</h3>
+                        <p class="item-price">$18</p>
+                        <p class="item-description">Grilled Beef Lettuce Wrap</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pun Tofu</h3>
+                        <p class="item-price">$15</p>
+                        <p class="item-description">Seasoned Lettuce Wrap</p>
+                    </div>
+
+                    <div class="menu-item"
+                        style="grid-column: 1 / -1; background-color: #f9f9f9; padding: 15px; border-radius: 8px;">
+                        <h3 class="item-name" style="color:var(--primary-color);">SAP SAP PLATTER</h3>
+                        <p class="item-price">$32.99</p>
+                        <p class="item-description">Lao Papaya Salad w/ Cabbage, Lao Beef Jerky, Lao Sausage, 3 Piece
+                            Chicken Wing, Vermicelli Noodles, Kap Moo, Egg (2).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="pho">
+                <div class="card-header">
+                    <h2>Noodle Soups</h2>
+                </div>
+                <div class="protein-banner">Beef Stock | Add Meat +$2 | Add Noodle +$2</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Beef Special</h3>
+                        <p class="item-price">$16</p>
+                        <p class="item-description">Eye round steak, Brisket, Rough Flank, Tripe & Meatballs</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Seafood</h3>
+                        <p class="item-price">$18</p>
+                        <p class="item-description">Shrimp, Squid, Fish Tofu, Imitation Crab Meat, Fish Cake</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Rough Flank & Brisket</h3>
+                        <p class="item-price">$16</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Eye-Round Steak & Meatball</h3>
+                        <p class="item-price">$15</p>
+                    </div>
+                    <div class="menu-item" style="grid-column: 1 / -1;">
+                        <h3 class="item-name">Single Meat Pho</h3>
+                        <p class="item-description">Veggie ($14) | Tripe ($15) | Chicken ($15) | Steak ($16) | Meatballs
+                            ($16) | Flank ($16) | Shrimp ($17)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="curry">
+                <div class="card-header">
+                    <h2>Curry</h2>
+                </div>
+                <div class="protein-banner">Tofu $10 | Veggie $12 | Chicken $14 | Shrimp $15 | Beef $16 | Seafood $18
+                </div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Gang Phet <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Fresh basil, carrots, onion, red bell pepper, green beans,
+                            mushrooms, baby corn, bamboo in a medium red curry sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Panang <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Fresh basil, carrots, onion, red bell pepper, snow peas, napa
+                            cabbage, mushrooms, broccoli, baby corn, bamboo in a mild red curry sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Gang Keo Wan <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Fresh basil, carrots, onion, red bell pepper, green beans,
+                            mushrooms, baby corn, bamboo in a hot green curry sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Masaman Curry</h3>
+                        <p class="item-description">Sweet potatoes, carrots, onion, red bell pepper, baby corn, snow
+                            peas topped with fresh peanuts in a yellow curry sauce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="stir-fry">
+                <div class="card-header">
+                    <h2>Stir Fry</h2>
+                </div>
+                <div class="protein-banner">Tofu/Veggie $14 | Chicken $15 | Beef $16 | Shrimp $17 | Seafood $18</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Thai Basil <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Fresh basil, Jalapenos, onion, broccoli, carrots, Napa cabbage, red
+                            peppers, snow peas, mushrooms, baby corn, in a spicy brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Thai Basil</h3>
+                        <p class="item-description">Fresh basil, carrots, onion, Napa cabbage, red peppers, broccoli,
+                            snow peas, mushrooms, baby corn, in a brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Phet</h3>
+                        <p class="item-description">Fresh basil, carrots, onion, Napa cabbage, red bell pepper, string
+                            beans, mushrooms, baby corn, bamboo stir fried in a mild red curry sauce with coconut.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Prigkhin</h3>
+                        <p class="item-description">Fresh basil, carrots, onion, red bell pepper, string beans, baby
+                            corn, sliced ginger in a spicy ginger brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Evil Jungle</h3>
+                        <p class="item-description">Fresh basil, carrots, Napa cabbage, onion, red bell pepper, string
+                            beans, mushrooms, baby corn, bamboo stir fried in a mild red curry sauce with coconut.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cashew</h3>
+                        <p class="item-description">Onion, carrots, Napa cabbage, red peppers, snow peas, baby corn, &
+                            cashews nuts in a light brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Prikpao</h3>
+                        <p class="item-description">Fresh basil, carrots, onion, red bell pepper, napa cabbage, string
+                            beans, baby corn, and bamboo in a sweet chili sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Ginger & Scallions</h3>
+                        <p class="item-description">Onion, scallions, sliced ginger in a light brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Chinese Broccoli</h3>
+                        <p class="item-description">Leafy green Chinese broccoli stir fried in a garlic brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Shanghai Bok Choy</h3>
+                        <p class="item-description">Bok choy stir fried in a garlic brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Stir Fry String Beans</h3>
+                        <p class="item-description">String beans stir fried in a garlic brown sauce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="noodles-rice">
+                <div class="card-header">
+                    <h2>Noodles & Fried Rice</h2>
+                </div>
+                <div class="protein-banner">Tofu/Veggie $14 | Chicken $15 | Beef $16 | Shrimp $17 | Seafood $18</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Thai (GF)</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Lao Phat Thai</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Lad Nar</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pad See Eww</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Drunken Noodle <i class="fas fa-pepper-hot"></i></h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Lo Mein</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Basil Lo Mein <i class="fas fa-pepper-hot"></i></h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Basil Rice Noodle <i class="fas fa-pepper-hot"></i></h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Basil Udon Noodle <i class="fas fa-pepper-hot"></i></h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Crispy Noodles</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3 class="item-name">Thai Fried Rice</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Pineapple Fried Rice</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Yellow Curry Fried Rice</h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Basil Fried Rice <i class="fas fa-pepper-hot"></i></h3>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">House Fried Rice (Chicken, Pork, Shrimp)</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="chef-specials">
+                <div class="card-header">
+                    <h2>Chef Specials</h2>
+                </div>
+                <div class="protein-banner">Served with Jasmine Rice (Brown Rice +$2)</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Basil Blue Mussels (12)</h3>
+                        <p class="item-price">$20</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Steam Ginger & Scallion Swai Fish</h3>
+                        <p class="item-price">$21</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Steamed Spicy Swai Fish w/ Lemongrass</h3>
+                        <p class="item-price">$21</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Salt & Pepper Swai Fish</h3>
+                        <p class="item-price">$15</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Salt & Pepper Shrimp (No Shell)</h3>
+                        <p class="item-price">$15</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Whole Fried Fish w/ Sweet Chili Sauce</h3>
+                        <p class="item-price">M.P.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="salads-soups">
+                <div class="card-header">
+                    <h2>Salads & Soups</h2>
+                </div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Papaya Salad</h3>
+                        <p class="item-price">$10</p>
+                        <p class="item-description">Lao or Thai Style Shredded Papaya Salad</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Yum Talay</h3>
+                        <p class="item-price">$15</p>
+                        <p class="item-description">Seafood Salad in a House Sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Yum Goong</h3>
+                        <p class="item-price">$13</p>
+                        <p class="item-description">Shrimp Salad in a House Sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Nam Khao</h3>
+                        <p class="item-price">$15</p>
+                        <p class="item-description">Crispy Rice Ball Lettuce Wraps</p>
+                    </div>
+                    <div class="menu-item" style="grid-column: 1/-1;">
+                        <h3 class="item-name">Soups</h3>
+                        <p class="item-description">Veggie $6 | Chicken $7 | Shrimp $7 | Seafood $8</p>
+                        <p class="item-description"><strong>Tom Yum</strong> (Lemongrass Broth) | <strong>Tom
+                                Ka</strong> (Coconut Milk Broth) | <strong>Gang Jued</strong> (Clear Broth)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="lunch">
+                <div class="card-header"
+                    style="background-color: var(--primary-color); color: white; padding: 15px; border-radius: 8px;">
+                    <h2 style="color: white;">LUNCH SPECIALS</h2>
+                    <span style="font-size: 0.9rem;">11AM-3PM Mon-Fri</span>
+                </div>
+                <div class="protein-banner" style="margin-top: 20px;">Includes Rice & Soup | Tofu/Veggie $14 | Chicken
+                    $15 | Beef $16</div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Thai Basil</h3>
+                        <p class="item-description">Fresh basil, carrots, onion, Napa cabbage, red peppers, broccoli,
+                            snow peas, mushrooms, baby corn.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Spicy Thai Basil <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Spicy brown sauce with Jalapenos and mixed veggies.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Prigkhin <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Spicy ginger brown sauce with string beans.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Cashew</h3>
+                        <p class="item-description">Light brown sauce with cashews and veggies.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Prikpao</h3>
+                        <p class="item-description">Sweet chili sauce with basil and bamboo.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Gang Keo Wan <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Hot Green Curry.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Masaman Curry</h3>
+                        <p class="item-description">Yellow Curry with peanuts.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Panang <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Mild Red Curry.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Gang Phet <i class="fas fa-pepper-hot"></i></h3>
+                        <p class="item-description">Medium Red Curry.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Basil Lo Mein</h3>
+                        <p class="item-description">Lo mein noodles stir fried in brown sauce.</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Phat Thai (GF)</h3>
+                        <p class="item-description">Classic rice noodles with peanut sauce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-card" id="extras">
+                <div class="card-header">
+                    <h2>Sides, Drinks & Dessert</h2>
+                </div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item">
+                        <h3 class="item-name">Sticky Rice</h3>
+                        <p class="item-price">$5</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Jasmine Rice</h3>
+                        <p class="item-price">$2.50</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Kap Moo (Pork Grinds)</h3>
+                        <p class="item-price">$4</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Jeow Bong (Sauce)</h3>
+                        <p class="item-price">$5</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3 class="item-name">Thai Ice Tea / Coffee</h3>
+                        <p class="item-price">$5</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Fresh Limeade Soy Milk</h3>
+                        <p class="item-price">$3</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3 class="item-name">Khao Neew Mamuang</h3>
+                        <p class="item-price">$8</p>
+                        <p class="item-description">Sweet Coconut Sticky Rice w/ Mango</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Khao Sungkaya</h3>
+                        <p class="item-price">$8</p>
+                        <p class="item-description">Purple Rice w/ Egg Custard</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">Nam Van</h3>
+                        <p class="item-price">$6</p>
+                        <p class="item-description">Tradtional Lao Dessert Made w/ Coconut Milk And a Mixture of Exotic
+                            Asian Fruits & Tapioca</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pdf-download-container"
+            style="text-align: center; margin-top: 50px; padding-bottom: 30px; border-top: 1px solid #eee; padding-top: 30px;">
+            <p style="font-size: 1.1rem; color: #555;">
+                Prefer a printable version?
+                <a href="menu.pdf" target="_blank"
+                    style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">
+                    Click here to download the full PDF Menu.
+                </a>
             </p>
         </div>
+
     </section>
 
     <footer>

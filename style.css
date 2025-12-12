@@ -330,6 +330,185 @@ footer {
     margin-top: 20px;
 }
 
+/* ================= MENU SPECIFIC STYLES ================= */
+
+/* Banner for Protein Prices (e.g. Tofu $14 | Chicken $15...) */
+.protein-options {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    border: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+/* Specific styling for the Lunch Special Box */
+.lunch-special-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.lunch-special-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Spicy Icon Style */
+.fa-pepper-hot {
+    color: #cc0000;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+/* Section Notes (e.g. "Served with Rice") */
+.section-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ================= NEW MENU LAYOUT STYLES ================= */
+
+/* 1. STICKY CATEGORY NAV BAR */
+.category-navbar {
+    position: sticky;
+    top: 80px;
+    /* Adjusts based on your main header height */
+    background-color: white;
+    z-index: 99;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    /* Allows scrolling on mobile */
+    white-space: nowrap;
+    /* Keeps links in a straight line */
+    border-bottom: 1px solid #eee;
+}
+
+.category-nav-list {
+    display: inline-flex;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+.category-nav-list a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.category-nav-list a:hover,
+.category-nav-list a:active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 2. MENU CARD (RECTANGLE) DESIGN */
+.menu-section-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 40px;
+    border: 1px solid #eee;
+    scroll-margin-top: 140px;
+    /* Ensures header doesn't hide title when clicked */
+}
+
+/* Header inside the card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Optional Category Image */
+.category-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    display: none;
+    /* Hidden by default until you add images */
+}
+
+/* 3. TWO-COLUMN GRID LAYOUT */
+.menu-items-grid {
+    display: grid;
+    /* This creates the 2 columns */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /* Space between columns */
+}
+
+/* Adjustments for the individual items in the grid */
+.menu-item {
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    /* Remove old margin */
+}
+
+/* Banner for Protein Prices */
+.protein-banner {
+    grid-column: 1 / -1;
+    /* Spans across both columns */
+    background-color: #fff7ed;
+    /* Light orange bg */
+    color: #c2410c;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERY: Mobile Adjustments */
+@media (max-width: 768px) {
+    .category-navbar {
+        top: 0;
+        /* Stick to very top on mobile if header moves */
+    }
+
+    .menu-items-grid {
+        /* On very small screens, stack to 1 column for readability */
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-section-card {
+        padding: 15px;
+    }
+}
+
+
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 768px) {
 
