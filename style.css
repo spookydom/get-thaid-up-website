@@ -381,6 +381,7 @@ footer {
 
 /* 1. STICKY CATEGORY NAV BAR */
 .category-navbar {
+    position: -webkit-sticky;
     position: sticky;
     top: 85px;
     /* Adjusts based on your main header height */
@@ -388,17 +389,26 @@ footer {
     z-index: 999;
     padding: 10px 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
     /* Allows scrolling on mobile */
-    white-space: nowrap;
+
     /* Keeps links in a straight line */
     border-bottom: 1px solid #eee;
 }
 
 .category-nav-list {
-    display: inline-flex;
-    padding: 0 20px;
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 15px 20px;
     gap: 15px;
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category-nav-list::-webkit-scrollbar {
+    display: none;
 }
 
 .category-nav-list a {
@@ -493,7 +503,7 @@ footer {
 /* MEDIA QUERY: Mobile Adjustments */
 @media (max-width: 768px) {
     .category-navbar {
-        top: 220;
+        top: 220px;
         /* Stick to very top on mobile if header moves */
     }
 
