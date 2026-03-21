@@ -515,6 +515,8 @@ footer {
 
     .menu-section-card {
         padding: 15px;
+
+        scroll-margin-top: 210px;
     }
 }
 
