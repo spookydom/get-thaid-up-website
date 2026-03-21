@@ -503,7 +503,7 @@ footer {
 /* MEDIA QUERY: Mobile Adjustments */
 @media (max-width: 768px) {
     .category-navbar {
-        top: 130px;
+        top: 140px;
         /* Stick to very top on mobile if header moves */
     }
 
