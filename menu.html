@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Get Thai'D Up</title>
+    <meta name="description" content="View the full menu at Get Thai'D Up in Webster, NY. Appetizers, curries, stir fry, pho, noodles, chef specials, drinks & desserts.">
+    <link rel="icon" type="image/jpeg" href="images/logo1.jpg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -427,10 +429,6 @@
                     <p class="item-price">$3</p>
                 </div>
                 <div class="menu-item">
-                    <h3 class="item-name">Sprite</h3>
-                    <p class="item-price">$3</p>
-                </div>
-                <div class="menu-item">
                     <h3 class="item-name">Ginger Ale</h3>
                     <p class="item-price">$3</p>
                 </div>
@@ -553,6 +551,41 @@
     <footer>
         <div class="copyright">&copy; 2025 Get Thai'D Up</div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top">&#8679;</button>
+
+    <script>
+        // --- Back to Top Button ---
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- Active Category Nav Highlight ---
+        const sections = document.querySelectorAll('.menu-section-card');
+        const navLinks = document.querySelectorAll('.category-nav-list a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const active = document.querySelector(`.category-nav-list a[href="#${entry.target.id}"]`);
+                    if (active) {
+                        active.classList.add('active');
+                        active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+                    }
+                }
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 
 </body>
 
