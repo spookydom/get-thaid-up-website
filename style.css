@@ -68,6 +68,25 @@ header {
     letter-spacing: 1px;
 }
 
+/* Logo image sits to the left of the restaurant name */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 56px;
+    width: auto;
+}
+
+/* Thin black outline so the name stands out */
+.logo span {
+    -webkit-text-stroke: 2px #000;
+    /* Draw the outline behind the fill so letters keep their shape */
+    paint-order: stroke fill;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -120,6 +139,17 @@ nav {
     background-color: #b45309;
     transform: scale(1.03);
     color: white;
+}
+
+/* Header Order Online button: red and a bit more compact */
+header .btn-order {
+    background-color: #dc2626;
+    padding: 7px 16px;
+    font-size: 0.85rem;
+}
+
+header .btn-order:hover {
+    background-color: #b91c1c;
 }
 
 .btn-order-hero {
@@ -216,13 +246,18 @@ nav {
     gap: 20px;
 }
 
-.image-grid img {
+.image-grid img,
+.image-grid video {
+    width: 100%;
+    object-fit: cover;
+    display: block;
     height: 250px;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.image-grid img:hover {
+.image-grid img:hover,
+.image-grid video:hover {
     transform: scale(1.02);
 }
 
@@ -337,6 +372,20 @@ footer {
     color: #777;
     border-top: 1px solid #333;
     padding-top: 20px;
+}
+
+.made-by {
+    margin-top: 6px;
+    font-size: 0.8rem;
+}
+
+.made-by a {
+    color: #999;
+    text-decoration: underline;
+}
+
+.made-by a:hover {
+    color: var(--primary-color);
 }
 
 /* ================= MENU PAGE STYLES ================= */
@@ -600,25 +649,35 @@ footer {
     /* --- HEADER --- */
     header {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px 15px;
+        gap: 10px;
+        padding: 12px 15px;
     }
 
+    .logo-img {
+        height: 44px;
+    }
+
+    /* Menu, About, Order Online and social icons share one row
+       (wraps only on very narrow screens) */
     nav {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        gap: 10px 16px;
+        width: 100%;
     }
 
     .nav-links {
-        /* Hide main links to make space, typically used with a burger menu */
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        width: 100%;
+        flex-direction: row;
+        gap: 16px;
         padding: 0;
+        margin: 0;
+    }
+
+    .social-icons {
+        gap: 12px;
     }
 
     /* --- PAGE 1: HERO SECTION --- */
@@ -660,7 +719,8 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
-    .image-grid img {
+    .image-grid img,
+    .image-grid video {
         height: 180px;
     }
 
@@ -689,16 +749,23 @@ footer {
     }
 
     /* --- FOOTER --- */
+    /* Logos sit on either side of the links instead of stacking */
     .footer-content {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 15px;
     }
 
     .footer-logos-left,
     .footer-logos-right {
-        /* Center logos when stacked */
-        justify-content: center;
         margin: 0;
+        flex-shrink: 0;
+    }
+
+    .logo-slot {
+        width: 70px;
+        height: 70px;
     }
 
     .footer-links {
