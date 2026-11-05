@@ -288,8 +288,7 @@ header .btn-order:hover {
     gap: 20px;
 }
 
-.image-grid img,
-.image-grid video {
+.image-grid img {
     width: 100%;
     object-fit: cover;
     display: block;
@@ -298,8 +297,7 @@ header .btn-order:hover {
     transition: transform 0.3s ease;
 }
 
-.image-grid img:hover,
-.image-grid video:hover {
+.image-grid img:hover {
     transform: scale(1.02);
 }
 
@@ -310,7 +308,7 @@ header .btn-order:hover {
     gap: 20px;
 }
 
-.welcome-video {
+.welcome-logo {
     width: 260px;
     height: 320px;
     object-fit: cover;
@@ -845,8 +843,7 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
-    .image-grid img,
-    .image-grid video {
+    .image-grid img {
         height: 180px;
     }
 
@@ -856,7 +853,7 @@ footer {
         flex-direction: column;
     }
 
-    .welcome-video {
+    .welcome-logo {
         width: 200px;
         height: 200px;
     }
