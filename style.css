@@ -180,36 +180,78 @@ header .btn-order:hover {
 
 /* ================= PAGE 1: HERO SECTION ================= */
 .hero {
-    padding: 60px 0;
     background-color: var(--bg-light);
 }
 
-.hero-layout {
-    display: grid;
-    grid-template-columns: 20fr 10fr;
-    /* Image is larger */
-    gap: 40px;
+/* Banner fills the screen below the header */
+.hero-banner {
+    position: relative;
+    min-height: calc(100vh - 100px);
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: url("images/hero-bg.jpg") center / cover no-repeat;
 }
 
-.hero-image-container img {
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
+/* White wash over the photo so it reads as a faded background */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.55);
+    /* Soft blur on the photo behind the wash */
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
 
+.hero-content {
+    position: relative;
+    max-width: 700px;
+}
+
+.hero-logo {
+    width: 220px;
     height: auto;
-    /* Enforces height */
+    margin: 0 auto 10px;
 }
 
-.hero-info {
-    padding: 20px;
-}
-
-.hero-info h1 {
+.hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    /* Soft white glow keeps the name readable over the photo */
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.95), 0 0 28px rgba(255, 255, 255, 0.8);
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 18px rgba(255, 255, 255, 0.85);
+}
+
+.hero-content .btn-order-hero {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #dc2626;
+}
+
+.hero-content .btn-order-hero:hover {
+    background-color: #b91c1c;
+}
+
+.hero-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 .info-block {
@@ -259,6 +301,97 @@ header .btn-order:hover {
 .image-grid img:hover,
 .image-grid video:hover {
     transform: scale(1.02);
+}
+
+/* ================= WELCOME MEDIA + FOOD CAROUSEL ================= */
+.welcome-media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-video {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Second row: claw machine photos with the logo on the right */
+.claw-media {
+    margin-top: 30px;
+}
+
+/* Show the whole logo instead of cropping its edges */
+.claw-logo {
+    object-fit: contain;
+    background-color: #fff;
+}
+
+/* Photos fade out on the left edge and fade in on the right.
+   White gradients sit over the edges; cheaper to draw than a CSS mask */
+.food-carousel {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.food-carousel::before,
+.food-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.food-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.food-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}
+
+.food-track {
+    display: flex;
+    width: max-content;
+    animation: food-scroll 45s linear infinite;
+    /* Keep the moving strip on the GPU so it glides smoothly */
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.food-track img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Food row scrolls the opposite way (to the right) */
+.scroll-right .food-track {
+    animation-direction: reverse;
+}
+
+/* Moving by half the track = one full set of photos, so the loop is seamless */
+@keyframes food-scroll {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Visitors who turn off motion get a strip they can swipe instead */
+@media (prefers-reduced-motion: reduce) {
+    .food-track { animation: none; }
+    .food-carousel { overflow-x: auto; }
 }
 
 /* ================= PAGE 3: FEATURE SECTION ================= */
@@ -340,18 +473,16 @@ footer {
     gap: 20px;
 }
 
+/* Footer logos have see-through backgrounds, so no circle behind them */
 .logo-slot {
-    width: 80px;
-    height: 80px;
-    background-color: #333;
-    /* Placeholder color */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    text-align: center;
-    border: 1px solid #444;
+}
+
+.logo-slot img {
+    width: auto;
+    height: 90px;
 }
 
 .footer-links {
@@ -681,31 +812,26 @@ footer {
     }
 
     /* --- PAGE 1: HERO SECTION --- */
-    .hero-layout {
-        /* Stack the image and text vertically */
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .hero-banner {
+        min-height: 70vh;
+        padding: 40px 15px;
     }
 
-    .hero-info {
-        order: -1;
-        /* Show info (hours/address) above the image on mobile */
-        padding: 0;
-        text-align: center;
+    .hero-logo {
+        width: 160px;
     }
 
-    .hero-image-container {
-        order: 1;
+    .hero-content h1 {
+        font-size: 2.6rem;
     }
 
-    .hero-info .btn-primary {
-        margin: 15px auto;
-        /* Center the button */
+    .hero-tagline {
+        font-size: 1rem;
     }
 
-    .hero-info h1 {
-        font-size: 2.5rem;
-        /* Reduce large heading size */
+    .hero-details {
+        flex-direction: column;
+        gap: 0;
     }
 
     /* --- PAGE 2: ABOUT SECTION --- */
@@ -724,6 +850,36 @@ footer {
         height: 180px;
     }
 
+
+    /* --- FOOD CAROUSEL --- */
+    .welcome-media {
+        flex-direction: column;
+    }
+
+    .welcome-video {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* On phones, put the claw logo above its photos, matching the food row */
+    .claw-media .claw-logo {
+        order: -1;
+    }
+
+    .food-carousel {
+        width: 100%;
+    }
+
+    .food-track img {
+        width: 180px;
+        height: 225px;
+        margin-right: 12px;
+    }
+
+    .food-carousel::before,
+    .food-carousel::after {
+        width: 5%;
+    }
 
     /* --- PAGE 3: FEATURE SECTION --- */
     .feature-layout {
@@ -763,9 +919,8 @@ footer {
         flex-shrink: 0;
     }
 
-    .logo-slot {
-        width: 70px;
-        height: 70px;
+    .logo-slot img {
+        height: 60px;
     }
 
     .footer-links {
